@@ -8,7 +8,7 @@ class MoviesController < ApplicationController
 
     respond_to do |format|
       format.html
-      format.text { render partial: 'movies/list', locals: { movies: @movies }, format: [:html] }
+      format.text { render partial: "movies/list", locals: {movies: @movies}, formats: [:html] }
     end
   end
 end
