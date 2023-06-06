@@ -1,3 +1,6 @@
+puts 'destroying the old database'
+Movie.destroy_all
+
 movies = [
   "batman",
   "superman",
@@ -5,7 +8,10 @@ movies = [
   "wonder woman",
   "thor",
   "black panther",
-  "avengers"
+  "avengers",
+  "harry potter",
+  "lord of the rings",
+  "star wars"
 ]
 
 movies.each do |movie|
@@ -20,3 +26,5 @@ movies.each do |movie|
     Movie.create(title: result["Title"], year: result["Year"].to_i, image_url: result["Poster"])
   end
 end
+
+puts "Added #{Movie.count} movies"
